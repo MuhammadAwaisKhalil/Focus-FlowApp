@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.88" prefHeight="400.0" prefWidth="600.0" styleClass="quiz-container" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.QuizController">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="141.0" opacity="0.85" prefHeight="200.0" prefWidth="576.0" spacing="3.0" styleClass="quiz-option-box">
+         <children>
+            <RadioButton fx:id="option1" mnemonicParsing="false" prefHeight="57.0" prefWidth="566.0" styleClass="quiz-radio" text="RadioButton" wrapText="true">
+               <toggleGroup>
+                  <ToggleGroup fx:id="optionsGroup" />
+               </toggleGroup>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="option2" mnemonicParsing="false" prefHeight="39.0" prefWidth="576.0" styleClass="quiz-radio" text="RadioButton" toggleGroup="$optionsGroup" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="option3" mnemonicParsing="false" prefHeight="61.0" prefWidth="576.0" styleClass="quiz-radio" text="RadioButton" toggleGroup="$optionsGroup" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="option4" mnemonicParsing="false" prefHeight="42.0" prefWidth="576.0" styleClass="quiz-radio" text="RadioButton" toggleGroup="$optionsGroup" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font></RadioButton>
+         </children>
+      </VBox>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="56.0" layoutX="145.0" layoutY="344.0" prefHeight="40.0" prefWidth="297.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#checkAnswer" prefHeight="42.0" prefWidth="111.0" styleClass="nav-button" text="Submit" />
+         </children>
+      </FlowPane>
+      <Label fx:id="questionLabel" layoutX="16.0" layoutY="47.0" prefHeight="79.0" prefWidth="590.0" styleClass="quiz-question" text="Question: " textFill="#f7ceff" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="235.0" layoutY="21.0" prefHeight="39.0" prefWidth="184.0" styleClass="dashboard-title" text="Quiz Mode" textFill="#ebceff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

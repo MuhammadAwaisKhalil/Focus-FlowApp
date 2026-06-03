@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="14.0" styleClass="generator-container" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PromptController">
+   <children>
+      <Label prefHeight="31.0" prefWidth="191.0" styleClass="generator-title" text="Schedule Generator" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" styleClass="generator-subtitle" text="Enter your requirements">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label styleClass="generator-sample-title" text="Sample prompt">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label prefHeight="41.0" prefWidth="508.0" styleClass="generator-sample-text" text="Create a schedeule for me from Monday to Friday. I need to study OOP, Multivariablr calculus and Digital logic Design. I come home from university at almost 5pm so incorporate short breaks also " wrapText="true">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="promptBox" prefHeight="131.0" prefWidth="600.0" promptText="Enter prompt" styleClass="prompt-area" wrapText="true" />
+      <Button mnemonicParsing="false" onAction="#makeSchedule" prefHeight="34.0" prefWidth="94.0" styleClass="magic-button" text="Magic" textFill="#201f1f" />
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</VBox>

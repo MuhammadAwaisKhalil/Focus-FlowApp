@@ -1,0 +1,275 @@
+/* --- Main Background --- */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #0f172a, #020617);
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Dashboard Title --- */
+.dashboard-title {
+    -fx-text-fill: #38bdf8; /* Cyber neon blue */
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 189, 248, 0.4), 15, 0, 0, 0);
+}
+
+/* --- The Top Search / Input Bar --- */
+.top-bar {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-border-color: #334155;
+    -fx-border-radius: 20px;
+    -fx-padding: 5px 15px;
+}
+
+/* --- Side Navigation Buttons (Create Schedule, Show Schedule, etc.) --- */
+.nav-button {
+    -fx-background-color: #1e293b; /* Dark slate */
+    -fx-text-fill: #94a3b8; /* Muted grey text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 20px;
+    -fx-background-radius: 8px;
+    -fx-border-width: 0 0 0 4px; /* Creates a hidden border on the left side */
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* When you hover over the menu buttons */
+.nav-button:hover {
+    -fx-background-color: rgba(56, 189, 248, 0.1); /* Subtle blue tint */
+    -fx-text-fill: #f8fafc; /* Text turns white */
+    -fx-border-color: #38bdf8; /* Left edge lights up neon blue! */
+}
+
+/* Special Warning Style for the Log Out Button */
+.logout-button {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: #ef4444; /* Red text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 20px;
+    -fx-background-radius: 8px;
+    -fx-border-width: 0 0 0 4px;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: rgba(239, 68, 68, 0.1); /* Red tint */
+    -fx-text-fill: #fca5a5;
+    -fx-border-color: #ef4444; /* Left edge lights up red */
+}
+
+/* --- The Small "+" Add Button --- */
+.add-button {
+    -fx-background-color: linear-gradient(to right, #0ea5e9, #2563eb);
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.add-button:hover {
+    -fx-background-color: linear-gradient(to right, #38bdf8, #3b82f6);
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 189, 248, 0.6), 10, 0, 0, 0);
+}
+
+/* --- The Center Area (Where the Schedule goes) --- */
+.center-pane {
+    -fx-background-color: rgba(30, 41, 59, 0.5); /* Slightly lighter dark box */
+    -fx-background-radius: 15px;
+    -fx-border-color: rgba(255, 255, 255, 0.05);
+    -fx-border-radius: 15px;
+}
+/* --- The Side Menu Panel (VBox) --- */
+.side-menu {
+    -fx-background-color: rgba(30, 41, 59, 0.6); /* Slightly transparent dark slate */
+    -fx-border-color: #334155; /* Subtle border line */
+    -fx-border-width: 0 1px 0 0; /* Only puts the border on the right edge */
+    -fx-padding: 30px 15px; /* Pushes the buttons slightly down and away from the edges */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 5, 0); /* Soft shadow bleeding into the main area */
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+/* --- The Draggable Task Blocks --- */
+.task-block {
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: rgba(255, 255, 255, 0.2); /* Faint glass border */
+    -fx-border-width: 1px;
+    -fx-cursor: hand; /* Changes mouse to a pointer hand */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 2, 2); /* Deep drop shadow */
+}
+
+/* Make it glow when you hover over it! */
+.task-block:hover {
+    -fx-border-color: #38bdf8; /* Neon blue border */
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 189, 248, 0.5), 15, 0, 0, 0); /* Neon glow */
+}
+/* --- The ScrollPane (Hides the ugly default white background) --- */
+.calendar-scroll {
+    -fx-background-color: transparent;
+    -fx-background: #0f172a; /* Forces the empty space behind the grid to be dark */
+    -fx-border-color: transparent;
+}
+
+/* Fixes the inside viewport of the ScrollPane */
+.calendar-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+/* --- Dark Mode Scrollbars! --- */
+.calendar-scroll .scroll-bar:vertical,
+.calendar-scroll .scroll-bar:horizontal {
+    -fx-background-color: #0f172a;
+}
+
+.calendar-scroll .scroll-bar:vertical .thumb,
+.calendar-scroll .scroll-bar:horizontal .thumb {
+    -fx-background-color: #334155; /* Dark grey scroll thumb */
+    -fx-background-radius: 10px;
+}
+
+.calendar-scroll .scroll-bar:vertical .thumb:hover,
+.calendar-scroll .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #38bdf8; /* Glows blue when you grab it! */
+}
+
+/* --- The GridPane Itself --- */
+.calendar-grid {
+    -fx-background-color: #0f172a;
+}
+
+/* This specifically targets the harsh default grid lines and softens them */
+.calendar-grid > *.line {
+    -fx-stroke: rgba(255, 255, 255, 0.1);
+    -fx-stroke-width: 1px;
+}
+
+/* --- The Labels inside the Grid (Headers & Time) --- */
+.grid-header {
+    -fx-text-fill: white; /*#38bdf8 Neon blue for Monday, Tuesday, etc. */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+.grid-time {
+    -fx-text-fill: white; /#94a3b8* Muted slate grey for 1:00 AM, 2:00 AM */
+    -fx-font-size: 12px;
+    -fx-padding: 5px;
+}
+/* --- The Main Quiz AnchorPane --- */
+.quiz-container {
+    -fx-background-color: linear-gradient(to bottom right, #0f172a, #020617);
+    -fx-border-color: rgba(56, 189, 248, 0.3); /* Subtle neon blue border, replacing the gold */
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 20, 0, 0, 5);
+}
+
+/* --- The Question Label --- */
+.quiz-question {
+    -fx-text-fill: #f8fafc; /* Crisp white for readability */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* --- The Box holding the Radio Buttons (Replaces the light gray box) --- */
+.quiz-option-box {
+    -fx-background-color: rgba(30, 41, 59, 0.6); /* Transparent dark slate */
+    -fx-background-radius: 10px;
+    -fx-border-color: #334155;
+    -fx-border-radius: 10px;
+}
+
+/* --- The Radio Buttons --- */
+.quiz-radio {
+    -fx-text-fill: #94a3b8; /* Muted gray text */
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+/* Style the little circular button itself */
+.quiz-radio .radio {
+    -fx-border-color: #38bdf8; /* Blue ring */
+    -fx-border-radius: 50%;
+    -fx-background-color: transparent;
+}
+
+/* Make the center dot glow blue when selected! */
+.quiz-radio:selected .radio .dot {
+    -fx-background-color: #38bdf8;
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 189, 248, 0.8), 5, 0, 0, 0);
+}
+/* --- Schedule Generator Main Box --- */
+.generator-container {
+    -fx-background-color: linear-gradient(to bottom right, #0f172a, #020617);
+    -fx-border-color: rgba(56, 189, 248, 0.3);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 20, 0, 0, 5);
+}
+
+/* --- Titles and Labels (Smaller Fonts) --- */
+.generator-title {
+    -fx-text-fill: #38bdf8;
+    -fx-font-size: 20px; /* Smaller than dashboard title */
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 189, 248, 0.4), 10, 0, 0, 0);
+}
+
+.generator-subtitle {
+    -fx-text-fill: #e2e8f0; /* Crisp light gray */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.generator-sample-title {
+    -fx-text-fill: #94a3b8; /* Muted gray */
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+}
+
+.generator-sample-text {
+    -fx-text-fill: #64748b; /* Very muted gray so it doesn't distract */
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+/* --- AI Prompt Text Area --- */
+.prompt-area {
+    -fx-control-inner-background: #1e293b; /* Dark background inside the box */
+    -fx-background-color: #334155, #1e293b; /* Border color, inner color */
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #f8fafc; /* White text when typing */
+    -fx-font-size: 12px;
+    -fx-prompt-text-fill: #64748b; /* Dark gray placeholder text */
+}
+
+/* Makes the text box glow blue when you click inside to type */
+.prompt-area:focused {
+    -fx-background-color: #38bdf8, #1e293b;
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 189, 248, 0.3), 10, 0, 0, 0);
+}
+
+/* --- The Magic Button --- */
+.magic-button {
+    -fx-background-color: linear-gradient(to right, #8b5cf6, #3b82f6); /* Purple to Blue AI gradient */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 24px;
+    -fx-cursor: hand;
+}
+
+.magic-button:hover {
+    -fx-background-color: linear-gradient(to right, #a78bfa, #60a5fa);
+    -fx-effect: dropshadow(three-pass-box, rgba(139, 92, 246, 0.6), 15, 0, 0, 0); /* Purple glow */
+}

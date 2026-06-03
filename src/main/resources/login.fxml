@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.loginController">
+   <children>
+      <Label fx:id="titleLabel" alignment="TOP_CENTER" layoutX="268.0" layoutY="35.0" styleClass="title-label" text="Login" textFill="#6ac2f4">
+         <font>
+            <Font name="SansSerif Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameTitle" layoutX="226.0" layoutY="155.0" text="Email" textFill="#6ab9fa">
+         <font>
+            <Font name="SansSerif Regular" size="11.0" />
+         </font>
+         <padding>
+            <Insets top="-6.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="emailField" layoutX="226.0" layoutY="175.0" />
+      <Label fx:id="usernameTitle1" layoutX="227.0" layoutY="223.0" text="Password" textFill="#5de7fa">
+         <font>
+            <Font name="SansSerif Regular" size="11.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordEnter" layoutX="226.0" layoutY="245.0" />
+      <Button fx:id="loginButton" layoutX="236.0" layoutY="320.0" mnemonicParsing="false" onAction="#checkLogin" prefHeight="35.0" prefWidth="114.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black;" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="200.0" layoutY="378.0" mnemonicParsing="false" onAction="#registerNewUser" prefHeight="48.0" prefWidth="187.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" styleClass="secondary-button" text="Create Account" />
+      <TextField fx:id="usernameField" layoutX="226.0" layoutY="108.0" />
+      <AmbientLight color="CHARTREUSE" layoutX="295.0" layoutY="47.0" lightOn="true" />
+      <Label fx:id="usernameTitle2" layoutX="226.0" layoutY="93.0" text="Username" textFill="#6ab9fa">
+         <font>
+            <Font name="SansSerif Regular" size="11.0" />
+         </font>
+         <padding>
+            <Insets top="-18.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>

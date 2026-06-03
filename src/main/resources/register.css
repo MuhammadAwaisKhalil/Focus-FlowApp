@@ -1,0 +1,28 @@
+/* --- The "Card" Container (Replaces the white box) --- */
+.register-card {
+    -fx-background-color: rgba(30, 41, 59, 0.8); /* Semi-transparent dark slate */
+    -fx-background-radius: 15px;
+    -fx-border-color: rgba(56, 189, 248, 0.2); /* Very faint blue border */
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 20, 0, 0, 5); /* Deep shadow */
+}
+
+/* --- The Subtitle ("Start managing your time...") --- */
+.subtitle-label {
+    -fx-text-fill: #64748b; /* Muted slate grey so it doesn't distract from the title */
+    -fx-font-size: 13px;
+}
+
+/* --- The "Already have an account?" Link --- */
+.text-link {
+    -fx-text-fill: #0ea5e9;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.text-link:hover {
+    -fx-text-fill: #38bdf8;
+    -fx-underline: true; /* Adds an underline when hovered */
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 189, 248, 0.4), 10, 0, 0, 0);
+}
